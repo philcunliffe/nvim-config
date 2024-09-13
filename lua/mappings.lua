@@ -17,6 +17,11 @@ map({ "v", "n", "x" }, 'i', 'k', { noremap = true, silent = true })
 map({ "v", "n", "x" }, 'k', 'j', { noremap = true, silent = true })
 map({ "v", "n", "x" }, 'j', 'h', { noremap = true, silent = true })
 
+map("i", '<C-i>', '<Up>', { noremap = true, silent = true })
+map("i", '<C-k>', '<Down>', { noremap = true, silent = true })
+map("i", '<C-j>', '<Left>', { noremap = true, silent = true })
+map("i", '<C-l>', '<Right>', { noremap = true, silent = true })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
