@@ -4,6 +4,19 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+map("n", "<C-i>", "<C-w>k", { desc = "Focus window up" })
+map("n", "<C-k>", "<C-w>j", { desc = "Focus window down" })
+map("n", "<C-j>", "<C-w>h", { desc = "Focus window left" })
+map("n", "<C-l>", "<C-w>l", { desc = "Focus window right" })
+
+map({ "v", "i", "x", "n" }, "<C-h>", "<Home>")
+map({ "v", "i", "x", "n" }, "<C-n>", "<End>")
+
+map("n", 'h', 'i', { noremap = true, silent = true })
+map({ "v", "n", "x" }, 'i', 'k', { noremap = true, silent = true })
+map({ "v", "n", "x" }, 'k', 'j', { noremap = true, silent = true })
+map({ "v", "n", "x" }, 'j', 'h', { noremap = true, silent = true })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
